@@ -1,0 +1,57 @@
+<BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route path="" element={<LandingPage />} />
+        <Route path="login" element={<LoginPage />} />
+        <Route path="forget-password" element={<ForgetPasswordPage />} />
+        <Route
+          path="forget-password-link"
+          element={<ForgetPasswordLinkPage />}
+        />
+        <Route path="registration" element={<RegistrationPage />} />
+        <Route path="contact" element={<ContactPage />} />
+
+        <Route path="candidate/" element={<Candidate />}>
+          <Route path="" element={<CandidateProfilePage />} />
+          <Route path="referee" element={<RefereeProfile />} />
+          <Route path="jobs" element={<ContactPage />} />
+          <Route path="profile/*" element={<CandidateProfileModule />} />
+          <Route path="all-jobs" element={<AllJobsPage />} />
+          <Route path="recommended-jobs" element={<RecommendedJobsPage />} />
+        </Route>
+        <Route
+          path="welcome"
+          element={<JobSearchRecommondationPreferencePage />}
+        />
+
+        <Route path="job/job-id" element={<FeaturedJobDetailsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
+);
+// for nesting routing after profile
+    <Routes>
+              <Route path="about-me" element={<AboutMePage />} />
+              <Route
+                path="contact-and-online-presence"
+                element={<ContactAndOnlinePresence />}
+              />
+
+              <Route
+                path="skill-and-experience"
+                element={<SkillAndExperience />}
+              />
+              <Route
+                path="education-and-academics"
+                element={<EducationAcademics />}
+              />
+
+              <Route path="resume" element={<ResumePage />} />
+              <Route
+                path="job-search-preference"
+                element={<JobSearchPreference />}
+              />
+              <Route path="privacy" element={<Privacy />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
